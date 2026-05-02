@@ -1,5 +1,6 @@
 {
-  "installCommand": "npm install",
+  "root": "nomad-ai",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "installCommand": "npm install"
 }
