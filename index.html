@@ -277,13 +277,88 @@
     html{scroll-behavior:auto}
   }
 
+  /* ===== MOBILE OPTIMIZATION ONLY ===== */
   @media (max-width:859px){
+    :root{--pad:clamp(1.15rem,5vw,2rem)}
+
+    body{font-size:16px;line-height:1.58}
+    .wrap{width:100%;padding-left:var(--pad);padding-right:var(--pad)}
+
+    nav{backdrop-filter:blur(10px)}
+    .nav-inner{padding:.95rem var(--pad);gap:1rem}
+    .logo{font-size:.92rem;letter-spacing:.18em}
+    .nav-links{gap:0;margin-left:auto}
     .nav-links a:not(.btn){display:none}
+    .nav-links .btn{padding:.72rem 1rem;font-size:.82rem;white-space:nowrap}
+
+    header{min-height:100svh;padding-top:5.8rem;padding-bottom:3.5rem;justify-content:center}
+    .eyebrow,.act-eyebrow{font-size:.68rem;letter-spacing:.2em}
+    .eyebrow{margin-bottom:1.45rem}
+    h1{font-size:clamp(2.35rem,12vw,4rem);line-height:1.02;letter-spacing:-.04em}
+    .line{overflow:visible}
+    .city-rotate{max-width:100%;white-space:normal;vertical-align:baseline}
+    .hero-sub{margin-top:1.7rem;max-width:32rem;font-size:1rem;line-height:1.6}
+    .hero-cta{margin-top:2rem;gap:.75rem;display:grid;grid-template-columns:1fr}
+    .hero-cta .btn{text-align:center;width:100%;padding:.9rem 1.1rem}
+    .keyline{margin-top:3.2rem;gap:1rem}
+    .keyline svg{width:52px;height:20px}
     .hero-cities{display:none}
     .scroll-hint{display:none}
     .rail{display:none}
-    .channels{grid-template-columns:1fr}
-    .facts{grid-template-columns:1fr}
+
+    .glow{width:80vmax;height:80vmax;top:-35vmax;right:-42vmax}
+    .glow.two{bottom:-42vmax;left:-44vmax}
+    .grain{opacity:.035}
+
+    .marquee-band{padding:2.4rem 0}
+    .marquee span{gap:1.4rem;padding-right:1.4rem;font-size:.9rem}
+
+    .act{padding:4.4rem 0}
+    h2{font-size:clamp(1.85rem,8vw,2.6rem);line-height:1.12}
+    .a1 .a1-head,.a2 .a2-head,.a3 .a3-intro{margin-bottom:2rem}
+    .a1 .act-eyebrow,.a2 .act-eyebrow,.a3 .act-eyebrow{margin-bottom:1rem}
+
+    .slides{gap:.9rem}
+    .slide{border-radius:18px;padding:1.45rem 1.25rem}
+    .slide svg{width:30px;height:30px;margin-bottom:1rem}
+    .slide .sn{font-size:.95rem;margin-bottom:.65rem}
+    .slide h3{font-size:1.12rem;margin-bottom:.45rem}
+    .slide p{font-size:.94rem;line-height:1.58}
+
+    .bignum{font-size:clamp(3rem,17vw,4.4rem);margin-top:1.5rem}
+    .bignum em{display:block;margin:.35rem 0 0;font-size:.32em}
+    .channels{grid-template-columns:1fr;gap:.9rem}
+    .ch{border-radius:18px;padding:1.35rem 1.2rem}
+    .ch .ct{font-size:.64rem;letter-spacing:.18em;margin-bottom:.75rem}
+    .ch h3{font-size:1.08rem;margin-bottom:.45rem}
+    .ch p{font-size:.92rem;line-height:1.56}
+
+    .mtrack{gap:.65rem}
+    .mpanel{padding:1.35rem 0;border-top:1px solid var(--line)}
+    .mpanel:last-child{border-bottom:1px solid var(--line)}
+    .mname{font-size:clamp(2.1rem,12vw,3.4rem)}
+    .mcities{font-size:.72rem;letter-spacing:.11em;line-height:1.5}
+
+    .final{min-height:auto;padding:5rem 0 4rem}
+    .final .act-eyebrow{margin-bottom:1.2rem}
+    .final h2{font-size:clamp(2rem,9vw,3rem)}
+    .final .lede{font-size:.98rem;line-height:1.6}
+    .final .cta{margin-top:2rem}
+    .final .cta .btn{width:100%;text-align:center}
+    .facts{grid-template-columns:1fr;gap:.9rem;margin-top:3rem}
+    .facts .fc{border-radius:18px;padding:1.35rem 1.2rem}
+    .facts .dot{margin-bottom:.9rem}
+
+    footer{padding:3rem 0;font-size:.82rem}
+    .foot{display:grid;gap:.75rem;text-align:center;justify-items:center}
+  }
+
+  @media (max-width:420px){
+    .nav-links .btn{padding:.68rem .82rem;font-size:.78rem}
+    h1{font-size:clamp(2.15rem,12.5vw,3rem)}
+    .hero-sub{font-size:.96rem}
+    .act{padding:3.6rem 0}
+    .slide,.ch,.facts .fc{padding:1.2rem 1rem}
   }
 </style>
 </head>
